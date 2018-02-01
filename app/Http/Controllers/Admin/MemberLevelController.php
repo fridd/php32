@@ -123,8 +123,13 @@
         public function destroy($id)
         {
             //
-           $this->memberlevel->where('id',$id)->delete();
-            return view('admin.index');
+           $arr=$this->memberlevel->where('id',$id)->delete();
+            if($arr){
+                return redirect('admin/memberlevel')->with('id', '删除成功');
+            }else{
+                return back()->withInput()->with('errors', '删除失败');
+            }
+
 
         }
     }

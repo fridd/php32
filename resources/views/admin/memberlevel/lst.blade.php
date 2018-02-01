@@ -20,8 +20,8 @@
                 <td>{{ $memberlevel->rate }}</td>
 
                 <td>
-                    <a href="{{ url('admin/memberlevel/'.$memberlevel->id.'/edit') }}">编辑</a> |
-                    <a href="{{ url('admin/memberlevel/'.$memberlevel->id.'/destroy') }}">删除</a> |
+                    <a href="{{ url('admin/memberlevel/'.$memberlevel->id.'/edit') }}">编辑</a>
+                    <a href="{{ url('admin/memberlevel/'.$memberlevel->id.'/destroy') }}">删除</a>
                 </td>
             </tr>
         @endforeach
