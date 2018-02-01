@@ -10,6 +10,10 @@ use App\Http\Controllers\Controller;
 
 class PrivilegeController extends IndexController
 {
+    public function __construct(Privilege $privilege)
+    {
+        $this->privilege = $privilege;
+    }
     /**
      * Display a listing of the resource.
      *
@@ -110,9 +114,14 @@ class PrivilegeController extends IndexController
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($privilege)
+    public function destroy($id)
     {
-        //
+        $arr=$this->privilege->where('id',$id)->delete();
+        if($arr){
+            return redirect('admin/privilege')->with('id', '删除成功');
+        }else{
+            return back()->withInput()->with('errors', '删除失败');
+        }
 
     }
 }

@@ -56,6 +56,8 @@
     Route::get('logout','LoginController@logout');
         #########权限资源############
     Route::resource('privilege','PrivilegeController');
+    Route::get('/privilege/{id}/destroy','PrivilegeController@destroy');
+
         #########角色资源############
     Route::resource('role','RoleController');
         #########管理员资源############

@@ -21,7 +21,7 @@
                 <td>{{ $privilege->action_name }}</td>
                 <td>
                     <a href="{{ url('admin/privilege/'.$privilege->id.'/edit') }}">编辑</a> |
-                    <a href="javascript:;" onclick="delPri({{$privilege->id}})">删除</a>
+                    <a href="{{ url('admin/privilege/'.$privilege->id.'/destroy') }}">删除</a>
                 </td>
             </tr>
         @endforeach

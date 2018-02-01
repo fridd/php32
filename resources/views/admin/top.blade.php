@@ -133,11 +133,11 @@
 <div id="menu-div">
     <ul>
         <li class="fix-spacel">&nbsp;</li>
-        <li><a href="php32/admin/goods" target="main-frame">起始页</a></li>
-        <li><a href="__GROUP__/Goods/goodsList" target="main-frame">商品列表</a></li>
-        <li><a href="__GROUP__/Order/orderList" target="main-frame">订单列表</a></li>
+        <li><a href="{{url('admin/main')}}" target="main-frame">起始页</a></li>
+        <li><a href="{{url('admin/goods')}}" target="main-frame">商品列表</a></li>
+        <li><a href="{{url('goodsnumber/store')}}__GROUP__/Order/orderList" target="main-frame">订单列表</a></li>
         <li><a href="__GROUP__/Comment/commentList" target="main-frame">用户评论</a></li>
-        <li><a href="__GROUP__/User/userList" target="main-frame">会员列表</a></li>
+        <li><a href="{{url('admin/memberlevel')}}" target="main-frame">会员列表</a></li>
         <li class="fix-spacer">&nbsp;</li>
     </ul>
     <br class="clear" />
