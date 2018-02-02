@@ -3,7 +3,9 @@
 @section('content')
 
     @include('errors.errors')
-    <form role="form" action="{{ url('admin/memberlevel/'.$memberlevel->id) }}" method="post">
+    <form role="form" action="{{ url('admin/memberlevel/'.$memberlevel->id) }}" method="POST">
+        <input type="hidden" name="_method" value="PUT">
+        <input type="hidden" name="_token" value="{{ csrf_token() }}">
         {{ csrf_field() }}
         <div class="form-group">
             <label for="name">会员级别名称</label>

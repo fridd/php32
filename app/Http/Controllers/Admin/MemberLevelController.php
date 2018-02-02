@@ -101,7 +101,8 @@
             //
             $data = $request->except('_token', '_method');
             $this->validate($request, [
-                'level_name' => 'required|unique:member_level',
+                'level_name' => 'required',
+//                'level_name' => 'required|unique:member_level',
                 'bottom_num' => 'required|numeric',
                 'top_num' => 'required|numeric',
                 'rate' => 'required|digits_between:1,3|min:1|max:100',

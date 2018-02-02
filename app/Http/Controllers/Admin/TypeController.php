@@ -92,9 +92,9 @@ class TypeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Type $type)
     {
-        //
+        return view('admin.type.edit')->with(['type'=>$type, 'page_btn_link'=>"/admin/type/create",'page_btn_name'=>'添加商品类型','page_btn_title'=>'商品类型']);
     }
 
     /**
